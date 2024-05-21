@@ -5,14 +5,35 @@ window.addEventListener("scroll",function(){
     header.classList.toggle("sticky",window.scrollY > 0);
 })
 
-// GERANDO OR PROJETOS NO HTML VIA JAVASCRIPT
+// GERANDO OR PROJETOS NO HTML VIA JAVASCRIPThttps://github.com/Rodrigo-Alb/Buscador_de_Clima
 
 const projetos = [
-    {'title':'Buscador de Clima','live':"",'url':"./components/Buscador_Clima_img.png", 'id':'2', 'code':'','cardPos':'card-center'},
-    {'title':'Controle Financeiro','live':"",'url':"./components/controle_Financeiro.png", 'id':'3', 'code':'','cardPos':'card-right'},
-    {'title':'Todo List','live':"",'url':"./components/todo_list_React_img.png", 'id':'1', 'code':'"','cardPos':'card-left'}
+    {
+        'title':'Buscador de Clima',
+        'live':"https://rodrigo-alb.github.io/Buscador_de_Clima/",
+        'url':"./components/Buscador_Clima_img.png", 'id':'2',
+        'id':'2',
+        'code':'https://github.com/Rodrigo-Alb/Buscador_de_Clima',
+        'txt':`Projeto criado com Javascript <i class='bx bxl-javascript'></i>, HTML5 <i class='bx bxl-html5' ></i> e CSS3 <i class='bx bxl-css3' </i>`
+    },
+    {
+        'title':'Controle Financeiro',
+        'live':"https://rodrigo-alb.github.io/Controle_Financeiro/",
+        'url':"./components/controle_Financeiro.png", 
+        'id':'3',
+        'code':'https://github.com/Rodrigo-Alb/Controle_Financeiro',
+        'txt':`Projeto criado com Javascript <i class='bx bxl-javascript'></i>, HTML5 <i class='bx bxl-html5' ></i> e CSS3 <i class='bx bxl-css3'</i>`
+    },
+    {
+        'title':'Todo List',
+        'live':"https://to-do-list-react-ten-xi.vercel.app/",
+        'url':"./components/todo_list_React_img.png", 
+        'id':'1', 
+        'code':'https://github.com/Rodrigo-Alb/To-Do-List-React',
+        'txt':'Projeto criado com React JS, Através de um Crash Course React.'
+    }
 ]
-function criarProjetos(titulo, live, id, code,cardPos){
+function criarProjetos(titulo, live, id, code,cardPos,txt){
     const container = document.querySelector(".portfolio-content")
 
     const card = document.createElement("div")
@@ -21,7 +42,7 @@ function criarProjetos(titulo, live, id, code,cardPos){
     card.innerHTML = `
         <div class="top-card">
             <h2 class="title">${titulo}</h2>
-            <span class="second-text">Projeto criado com Javascript <i class='bx bxl-javascript'></i>, HTML5 <i class='bx bxl-html5' ></i> e CSS3 <i class='bx bxl-css3' ></i></span>
+            <span class="second-text">${txt}</i></span>
         </div>
         <hr>
         <div class="media-card" id=${id}></div>
@@ -37,7 +58,7 @@ function criarProjetos(titulo, live, id, code,cardPos){
 
 const loadProjetos = () => {
     projetos.forEach ((item) => {
-        criarProjetos(item.title,item.live,item.id,item.code, item.cardPos)
+        criarProjetos(item.title,item.live,item.id,item.code, item.cardPos, item.txt)
     })
 }
 
@@ -73,3 +94,4 @@ const toggleMenu = () => {
 }
 links.forEach( (link) => link.addEventListener('click',toggleMenu))
 menu.addEventListener('click',toggleMenu)
+

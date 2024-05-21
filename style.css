@@ -155,18 +155,15 @@ header > .navlist > li > a:hover {
        font-weight: 500;
    }
    .portfolio-content{
-       display: flex;
-       align-items: center;
-       justify-content: space-around;
-       margin-top: 1rem;
-       text-align: left;
-       width: 100%;
-       overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        height: auto;
+        place-items: center;
+        width: 120%;
    }
    .card-container{
        width: 100%;
        display: flex;
-       justify-content: space-between;
        align-items: center;
    
    }
@@ -178,13 +175,14 @@ header > .navlist > li > a:hover {
        padding-left: 0;
        padding-right: 0;
        box-shadow: 0px 2px 18px #26395354;
-       max-width: 350px;
+       max-width: 300px;
        position: relative;
-       transition: ease-in .2s
+       transition: ease-in .2s;
+       height: 525px;
    }
    .media-card {
        height: 300px;
-       width: 350px;
+       width: 300px;
    }
    .top-card{
        padding: 15px;
@@ -248,7 +246,7 @@ header > .navlist > li > a:hover {
     display: none;
    }
 
-   @media (max-width:850px){
+   @media (max-width:950px){
     .home{
         display: flex;
         flex-direction: column-reverse;
@@ -273,9 +271,15 @@ header > .navlist > li > a:hover {
     .contato{
      width: 30%;
     }
+    .portfolio-content{
+        width: auto;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+  
 }
 
-@media (max-width:575px){
+@media (max-width:750px){
     .home{
         display: flex;
         flex-direction: column-reverse;
@@ -320,10 +324,7 @@ header > .navlist > li > a:hover {
     .navlist > li{
         display: none;
     }
-    .media-card {
-        height: 200px;
-        width: 250px;
-    }   
+  
     .navlist2{
         position: absolute;
         z-index: 998;
@@ -355,10 +356,10 @@ header > .navlist > li > a:hover {
     .open{
         transform: rotate(-90deg);
     }
-}
-    box-shadow: 1px 1px 5px black;
-    outline: 0;
-    border: none;
+    .portfolio-content{
+        grid-template-columns: repeat(1,1fr);
+
+    }
 }
 .projeto > img{
     width: 22rem;
