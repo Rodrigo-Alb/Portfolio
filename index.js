@@ -31,6 +31,23 @@ const projetos = [
         'id':'1', 
         'code':'https://github.com/Rodrigo-Alb/To-Do-List-React',
         'txt':'Projeto criado com React JS, Através de um Crash Course React.'
+    },
+    {
+        'title':'Catálogo de Filmes',
+        'live':'https://catalogo-cinema.vercel.app/',
+        'url':'./components/Catalogo_de_Filmes.png',
+        'id':'4',
+        'code':'https://github.com/Rodrigo-Alb/Catalogo-Cinema',
+        'txt':'Projeto criado com React JS e API TMDMovies'
+    },
+    
+    {
+        'title':'Buscador de CEP',
+        'live':'https://rodrigo-alb.github.io/Buscador_Cep/',
+        'url':'./components/Buscador_cep.png',
+        'id':'5',
+        'code':'https://github.com/Rodrigo-Alb/Buscador_Cep',
+        'txt':'Projeto criado com JavaScript e API da Brasil API'
     }
 ]
 function criarProjetos(titulo, live, id, code,cardPos,txt){
