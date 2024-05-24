@@ -164,8 +164,7 @@ header > .navlist > li > a:hover {
    .card-container{
        width: 100%;
        display: flex;
-       align-items: center;
-   
+       align-items: center;   
    }
    .cards{
        margin: 50px;
@@ -179,6 +178,9 @@ header > .navlist > li > a:hover {
        position: relative;
        transition: ease-in .2s;
        height: 525px;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
    }
    .media-card {
        height: 300px;
