@@ -48,6 +48,14 @@ const projetos = [
         'id':'5',
         'code':'https://github.com/Rodrigo-Alb/Buscador_Cep',
         'txt':'Projeto criado com JavaScript e API da Brasil API'
+    },
+    {
+        'title':'Carrinho de Compras',
+        'live':'https://carrinho-de-compras-k3k1.vercel.app/',
+        'url':'./components/Carrinho_De_Compras.png',
+        'id':'6',
+        'code':'https://github.com/Rodrigo-Alb/Carrinho_De_Compras/tree/main/CarrinhoDeCompras',
+        'txt':'Projeto criado com React JS'
     }
 ]
 function criarProjetos(titulo, live, id, code,cardPos,txt){
